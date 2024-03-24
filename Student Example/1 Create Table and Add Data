@@ -1,0 +1,34 @@
+--Create student table
+CREATE TABLE student(
+    student_id INT AUTO_INCREMENT, 
+    name VARCHAR(25) NOT NULL,
+    major VARCHAR(20) DEFAULT 'undecided',
+    PRIMARY KEY(student_id)
+);
+
+--Get info about student table
+DESCRIBE student;
+
+--Delete student table
+DROP TABLE student;
+
+--Add extra column on student table
+ALTER TABLE student ADD gpa DECIMAL(3, 2);
+
+--Delete the created gpa column
+ALTER TABLE student DROP gpa;
+
+--Insert data into student table
+INSERT INTO student(name, major, gpa) 
+VALUES
+    ('Jack', 'Biology', '3.14'),
+    ('Kate', 'Sociology', '3.52'),
+    ('Claire', 'English', '3.48'),
+    ('Jack', 'Biology', '3.12'),
+    ('Mike', 'Computer Sci', '3.75');
+
+--Delete data from student table
+DELETE FROM student WHERE student_id='1';
+
+--Look at values inserted
+SELECT * FROM student;
