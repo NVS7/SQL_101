@@ -1,0 +1,22 @@
+-- <, >, <=, >=, =, <>, AND, OR
+
+SELECT * FROM student
+LIMIT 3;
+
+SELECT name FROM student;
+
+SELECT student.name, student.major
+FROM student
+ORDER BY name;
+
+SELECT *
+FROM student
+WHERE major = 'Bio' OR name = 'Kate';
+
+SELECT *
+FROM student
+WHERE student_id >= 3;
+
+SELECT *
+FROM student
+WHERE name IN ('Claire', 'Kate', 'Mike');
