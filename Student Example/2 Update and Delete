@@ -1,0 +1,17 @@
+SELECT * FROM student;
+
+--Update how a major is listed
+UPDATE student
+SET major = 'Bio'
+WHERE major = 'Biology';
+
+UPDATE student
+SET major = 'Comp Sci'
+WHERE major = 'Computer Sci' OR major = 'Computer Science';
+
+--Delete all data from student table
+DELETE FROM student;
+
+--Delete specific row
+DELETE FROM student
+WHERE student_id = 6;
